@@ -33,9 +33,28 @@ create folder DevDataBase
 JPAのEntityのライフサイクル上、引数なしのコンストラクタが必要。
 引数なしのコンストラクタが存在するような構成ならば不要。(finalなフィールドが無い場合など。@Builder使うなら絶対必要)
 
+
 @AllArgsConstructor
 すべてのフィールドを引数に取るコンストラクタを作成する。
 NoArgsConstructorを指定した場合、こちらも指定しないと、
 @Builderが動かない(@Builderではすべてのフィールドを引数にとるコンストラクタを自動で生成するが、xxxArgsConstructorがついてるクラスに対しては、コンストラクタを作成しない。そして動かない。)
+
+
+@RestControlle
+@Controllerの拡張アノテーション。
+@Controllerは@Serviceや@Repository同様、@Compornentのエイリアス。
+@RestControllerでは加えて、各メソッドに@ResponseBodyを付与する。
+
+
+@ResponseBody
+メソッドに付与することで、返り値のjavaオブジェクトをjsonへ変換する。
+
+
+@RequestMapping
+引数methodに指定したHttpメソッドで、引数pathに指定したパスをメソッドにマッピングするアノテーション。
+クラスに付与することで、引数のパスが、クラスに所属するメソッドのベースパスとなる。
+
+
+
 
 ```
