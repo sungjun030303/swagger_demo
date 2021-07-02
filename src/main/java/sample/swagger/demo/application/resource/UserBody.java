@@ -6,8 +6,6 @@ import sample.swagger.demo.domain.object.User;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-//import javax.validation.constraints.NotBlank;
-//import javax.validation.constraints.Size;
 
 /**
  * リクエストボディのマッピング用クラス
